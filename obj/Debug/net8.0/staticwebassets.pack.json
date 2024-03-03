@@ -1,0 +1,49 @@
+{
+  "Files": [
+    {
+      "Id": "E:\\Suvnet2023\\OOP2\\MVCÖvning\\MovieTheaterBlazor\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\MovieTheaterBlazor.bundle.scp.css",
+      "PackagePath": "staticwebassets\\MovieTheaterBlazor.bundle.scp.css"
+    },
+    {
+      "Id": "E:\\Suvnet2023\\OOP2\\MVCÖvning\\MovieTheaterBlazor\\wwwroot\\BookingStyle.css",
+      "PackagePath": "staticwebassets\\BookingStyle.css"
+    },
+    {
+      "Id": "E:\\Suvnet2023\\OOP2\\MVCÖvning\\MovieTheaterBlazor\\wwwroot\\app.css",
+      "PackagePath": "staticwebassets\\app.css"
+    },
+    {
+      "Id": "E:\\Suvnet2023\\OOP2\\MVCÖvning\\MovieTheaterBlazor\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css"
+    },
+    {
+      "Id": "E:\\Suvnet2023\\OOP2\\MVCÖvning\\MovieTheaterBlazor\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "E:\\Suvnet2023\\OOP2\\MVCÖvning\\MovieTheaterBlazor\\wwwroot\\favicon.png",
+      "PackagePath": "staticwebassets\\favicon.png"
+    },
+    {
+      "Id": "E:\\Suvnet2023\\OOP2\\MVCÖvning\\MovieTheaterBlazor\\wwwroot\\moviestyle.css",
+      "PackagePath": "staticwebassets\\moviestyle.css"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.MovieTheaterBlazor.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.MovieTheaterBlazor.props",
+      "PackagePath": "build\\MovieTheaterBlazor.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.MovieTheaterBlazor.props",
+      "PackagePath": "buildMultiTargeting\\MovieTheaterBlazor.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.MovieTheaterBlazor.props",
+      "PackagePath": "buildTransitive\\MovieTheaterBlazor.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

@@ -1,0 +1,49 @@
+@page "/movies"
+@inject HttpClient Http
+
+<link rel="stylesheet" href="moviestyle.css" />
+<h1 class="header">Movies</h1>
+
+@if (movies == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    @foreach (var movie in movies)
+    {
+        <div class="movie">
+            <img src="@($"https://image.tmdb.org/t/p/w1280{movie.Poster_path}")" alt="@movie.Original_title" />
+            <div class="movie-info">
+                <h3>@movie.Title</h3>
+                <span class="@GetClassByRate(movie.Vote_average)">@movie.Vote_average</span>
+            </div>
+            <div class="overview">
+                <h3>Overview</h3>
+                @movie.Overview
+            </div>
+        </div>
+    }
+}
+
+@code {
+    private List<Movie> movies;
+
+   protected override async Task OnInitializedAsync()
+    {
+        await GetMovies("https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=3fd2be6f0c70a2a598f084ddfb75487c&page=1");
+    }
+
+    private async Task GetMovies(string url)
+    {
+        var response = await Http.GetFromJsonAsync<Movie>(url);
+        movies = response.Results;
+    }
+
+    private string GetClassByRate(double vote)
+    {
+        if (vote >= 7.5) return "green";
+        else if (vote >= 7) return "orange";
+        else return "red";
+    }
+}

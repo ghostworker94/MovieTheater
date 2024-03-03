@@ -1,0 +1,90 @@
+@page "/movieseatbooking"
+@using System.Collections.Generic
+@using MovieTheater.Services
+@inject MovieService MovieService
+@inject SeatService SeatService
+@inject IJSRuntime JSRuntime
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="BookingStyle.css" />
+    <title>Movie Seat Booking</title>
+</head>
+
+<h3>Movie Seat Booking</h3>
+
+<div class="movie-container">
+    <label for="movie">Pick a movie:</label>
+    <select @bind="@SelectedMovieIndex">
+        @foreach (var movie in Movies)
+        {
+            <option value="@movie.Value">@movie.Title ($@movie.Value)</option>
+        }
+    </select>
+</div>
+
+<ul class="showcase">
+    <li>
+        <div class="seat"></div>
+        <small>N/A</small>
+    </li>
+    <li>
+        <div class="seat selected"></div>
+        <small>Selected</small>
+    </li>
+    <li>
+        <div class="seat occupied"></div>
+        <small>Occupied</small>
+    </li>
+</ul>
+
+<div class="container">
+    <div class="screen"></div>
+    @foreach (var row in Rows)
+    {
+        <div class="row">
+            @foreach (var seat in row)
+            {
+                <div class="seat @(seat.IsOccupied ? "occupied" : "")" @onclick="() => ToggleSeat(row.IndexOf(seat))"></div>
+            }
+        </div>
+    }
+</div>
+
+<p class="text">
+    You have selected <span>@SelectedSeatsCount</span> seats for a price of $<span>@TotalPrice</span>
+</p>
+
+@code
+{
+    public List<Movie> Movies { get; set; } = new List<Movie>();
+    public List<List<Seat>> Rows { get; set; } = new List<List<Seat>>();
+    public int SelectedMovieIndex { get; set; } = 0;
+    public int SelectedSeatsCount { get; set; } = 0;
+    public int TotalPrice { get; set; } = 0;
+
+    protected override async Task OnInitializedAsync()
+    {
+        Movies = await MovieService.GetMovies();
+        Rows = (await SeatService.GetSeats(Movies[SelectedMovieIndex].Id))
+        .GroupBy(seat => seat.RowNumber)
+        .Select(group => group.ToList())
+        .ToList();
+        UpdateSelectedCount();
+    }
+
+    private async Task ToggleSeat(int seatIndex)
+    {
+        var seat = Rows[seatIndex / 8][seatIndex % 8];
+        seat.IsOccupied = !seat.IsOccupied;
+        await SeatService.UpdateSeat(seat);
+        UpdateSelectedCount();
+    }
+
+    private void UpdateSelectedCount()
+    {
+        SelectedSeatsCount = Rows.SelectMany(row => row).Count(seat => seat.IsOccupied);
+        TotalPrice = SelectedSeatsCount * Movies[SelectedMovieIndex].Value;
+    }
+}
