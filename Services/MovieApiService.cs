@@ -1,7 +1,6 @@
 using MovieTheater.DataBaseContext;
 using MovieTheater.Models;
 using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
 
 namespace MovieTheater.Service
 {
