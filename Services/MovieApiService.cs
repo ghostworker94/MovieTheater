@@ -29,6 +29,7 @@ namespace MovieTheater.Service
 
         public async Task UpdateDatabaseWithMovies()
         {
+            Random random = new Random();
 
             var movies = await GetMoviesFromApi();
             if (movies != null)
@@ -53,7 +54,7 @@ namespace MovieTheater.Service
                             Video = movie.Video,
                             Vote_average = movie.Vote_average,
                             Vote_count = movie.Vote_count,
-                            Value = movie.Value
+                            Value = random.Next(69, 420)
                         });
                     }
                 }

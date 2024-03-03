@@ -10,21 +10,19 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddRazorComponents().AddInteractiveServerComponents();
 
-builder.Services.AddDbContext<DatabaseContext>(options => options.UseSqlite(builder.Configuration.GetConnectionString("DatabaseContext") ??
-throw new InvalidOperationException("Connection string 'DatabaseContext' not found.")));
-
 builder.Services.AddScoped<MovieService>();
 builder.Services.AddScoped<SeatService>();
 builder.Services.AddScoped<BookingService>();
 builder.Services.AddScoped<MovieApiService>();
+builder.Services.AddScoped<Seed>();
+
+builder.Services.AddDbContext<DatabaseContext>(options => options.UseSqlite(builder.Configuration.GetConnectionString("DatabaseContext") ??
+throw new InvalidOperationException("Connection string 'DatabaseContext' not found.")));
 
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
 builder.Services.AddSingleton<HttpClient>();
 
-var serviceProvider = builder.Services.BuildServiceProvider();
-var movieService = serviceProvider.GetRequiredService<MovieApiService>();
-movieService.UpdateDatabaseWithMovies().Wait();
 
 var app = builder.Build();
 
@@ -32,8 +30,11 @@ using (var scope = app.Services.CreateScope())
 {
     var services = scope.ServiceProvider;
     var seeder = services.GetRequiredService<Seed>();
-    seeder.SeedData();
+    seeder.SeedSeatData();
+    // seeder.SeedGenreData();
 
+    var movieService = services.GetRequiredService<MovieApiService>();
+    movieService.UpdateDatabaseWithMovies().Wait();
 }
 
 // Configure the HTTP request pipeline.

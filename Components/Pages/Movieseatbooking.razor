@@ -6,7 +6,6 @@
 @inject IJSRuntime JSRuntime
 
 <head>
-    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="BookingStyle.css" />
     <title>Movie Seat Booking</title>
@@ -41,12 +40,13 @@
 
 <div class="container">
     <div class="screen"></div>
-    @foreach (var row in Rows)
+    @foreach (var row in Rows.Select((value, index) => new { value, index }))
     {
         <div class="row">
-            @foreach (var seat in row)
+            @foreach (var seat in row.value.Select((value, index) => new { value, index }))
             {
-                <div class="seat @(seat.IsOccupied ? "occupied" : "")" @onclick="() => ToggleSeat(row.IndexOf(seat))"></div>
+                <div class="seat @(seat.value.IsOccupied ? "occupied" : "")" @onclick="() => ToggleSeat(row.index, seat.index)">
+                </div>
             }
         </div>
     }
@@ -74,9 +74,9 @@
         UpdateSelectedCount();
     }
 
-    private async Task ToggleSeat(int seatIndex)
+    private async Task ToggleSeat(int rowIndex, int seatIndex)
     {
-        var seat = Rows[seatIndex / 8][seatIndex % 8];
+        var seat = Rows[rowIndex][seatIndex];
         seat.IsOccupied = !seat.IsOccupied;
         await SeatService.UpdateSeat(seat);
         UpdateSelectedCount();
