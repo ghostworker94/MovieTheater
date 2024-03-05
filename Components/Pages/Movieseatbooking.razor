@@ -55,7 +55,8 @@
     You have selected <span>@SelectedSeatsCount</span> seats for a price of $<span>@TotalPrice</span>
 </p>
 
-<form class="email">Email: <input type="email"></form><button class="button" role="button">Book Ticket</button>
+<form class="email">Email: <input type="email" @bind="Email"></form>
+<button class="button" @onclick="() => BookTicket()">Book Ticket</button>
 
 @code
 {
@@ -65,7 +66,7 @@
     public int SelectedMovieIndex { get; set; } = 0;
     public int SelectedSeatsCount { get; set; } = 0;
     public int TotalPrice { get; set; } = 0;
-
+    public string Email { get; set; }
     protected override async Task OnInitializedAsync()
     {
         Movies = await MovieService.GetMovies();
@@ -100,7 +101,10 @@
         var booking = new BookingTable
             {
                 MovieId = Movies[SelectedMovieIndex].Id,
-                Seat = selectedSeats
+                Seat = selectedSeats,
+                Email = this.Email,
+                Amount = TotalPrice,
+                PresentingDate = BookingService.RandomDate
             };
         BookingService.AddBooking(booking);
     }
