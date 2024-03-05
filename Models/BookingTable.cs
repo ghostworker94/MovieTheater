@@ -6,8 +6,9 @@ namespace MovieTheater.Models
     {
         public int Id { get; set; }
         public string[] Seatnumber { get; set; }
-        public User User { get; set; }
-        public int UserId { get; set; }
+        public User? User { get; set; }
+        public int? UserId { get; set; }
+        public string Email { get; set; }
         public DateTime PresentingDate { get; set; }
         public int MovieId { get; set; }
         public int Amount { get; set; }

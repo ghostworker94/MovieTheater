@@ -3,13 +3,12 @@
 @using MovieTheater.Services
 @inject MovieService MovieService
 @inject SeatService SeatService
+@inject BookingService BookingService
 @inject IJSRuntime JSRuntime
 
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="BookingStyle.css" />
-    <title>Movie Seat Booking</title>
-</head>
+
+<link rel="stylesheet" href="BookingStyle.css" />
+
 
 <h3>Movie Seat Booking</h3>
 
@@ -45,8 +44,8 @@
         <div class="row">
             @foreach (var seat in row.value.Select((value, index) => new { value, index }))
             {
-                <div class="seat @(seat.value.IsOccupied ? "occupied" : "")" @onclick="() => ToggleSeat(row.index, seat.index)">
-                </div>
+                <button class="@(seat.value.IsOccupied ? "seat.occupied" : seat.value.IsSelected ? "seat.selected" : "seat")"
+                    @onclick="() => ToggleSeat(row.index, seat.index)"></button>
             }
         </div>
     }
@@ -56,10 +55,14 @@
     You have selected <span>@SelectedSeatsCount</span> seats for a price of $<span>@TotalPrice</span>
 </p>
 
+<form>Email: <input type="email" name="" id=""></form>
+
+
 @code
 {
     public List<Movie> Movies { get; set; } = new List<Movie>();
     public List<List<Seat>> Rows { get; set; } = new List<List<Seat>>();
+    public List<List<Seat>> Seatnumber { get; set; } = new List<List<Seat>>();
     public int SelectedMovieIndex { get; set; } = 0;
     public int SelectedSeatsCount { get; set; } = 0;
     public int TotalPrice { get; set; } = 0;
@@ -76,10 +79,13 @@
 
     private async Task ToggleSeat(int rowIndex, int seatIndex)
     {
+        SelectedSeatsCount++;
         var seat = Rows[rowIndex][seatIndex];
         seat.IsOccupied = !seat.IsOccupied;
+        seat.IsSelected = !seat.IsSelected;
         await SeatService.UpdateSeat(seat);
         UpdateSelectedCount();
+        StateHasChanged();
     }
 
     private void UpdateSelectedCount()

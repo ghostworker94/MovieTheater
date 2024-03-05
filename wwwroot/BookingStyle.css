@@ -12,7 +12,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    height: 100%;
     margin: 0;
 }
 
@@ -45,6 +45,11 @@ body {
     margin: 3px;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+}
+
+.seat:hover {
+    cursor: pointer;
+    transform: scale(1.2);
 }
 
 .seat.selected {
@@ -101,7 +106,7 @@ body {
 .screen {
     background-color: #fff;
     height: 70px;
-    width: 100%;
+    width: 80%;
     margin: 15px 0;
     transform: rotateX(-45deg);
     box-shadow: 0 3px 10px rgba(255, 255, 255, 0.7);

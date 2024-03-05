@@ -8,11 +8,13 @@
 * {
   box-sizing: border-box;
 }
-/* .box {
+
+.box {
   float: left;
   width: 33.33%;
   padding: 50px;
-} */
+}
+
 body {
   background-color: var(--primary-color);
   font-family: "Poppins", sans-serif;
@@ -59,7 +61,8 @@ body {
 main {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-evenly;
+  display: inline-block;
 }
 
 .movie {
@@ -67,20 +70,16 @@ main {
   margin: 1rem;
   background-color: var(--secondary-color);
   box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
-  position: relative;
+  position: sticky;
   overflow: hidden;
   border-radius: 3px;
-}
-
-.movies {
-  display: flex;
+  display: inline-block;
   flex-wrap: wrap;
-  justify-content: center;
 }
 
 .movie img {
   float: left;
-    width: 100%;
+  width: 100%;
 }
 
 .movie-info {

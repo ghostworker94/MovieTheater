@@ -251,3 +251,4 @@ E:\Suvnet2023\OOP2\MVCÖvning\MovieTheaterBlazor\bin\Debug\net8.0\runtimes\win\l
 E:\Suvnet2023\OOP2\MVCÖvning\MovieTheaterBlazor\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Security.Cryptography.ProtectedData.dll
 E:\Suvnet2023\OOP2\MVCÖvning\MovieTheaterBlazor\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Windows.Extensions.dll
 E:\Suvnet2023\OOP2\MVCÖvning\MovieTheaterBlazor\obj\Debug\net8.0\MovieTheaterBlazor.csproj.CopyComplete
+E:\Suvnet2023\OOP2\MVCÖvning\MovieTheaterBlazor\obj\Debug\net8.0\MovieTheaterBlazor.sourcelink.json

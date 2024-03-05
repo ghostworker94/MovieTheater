@@ -2,7 +2,7 @@ using Microsoft.EntityFrameworkCore;
 using MovieTheater.DataBaseContext;
 using MovieTheater.Models;
 
-namespace MovieTheater.Service
+namespace MovieTheater.Services
 {
     public class BookingService
     {
