@@ -46,10 +46,8 @@ namespace MovieTheater.Services
         {
             Random random = new Random();
 
-            // Generera ett slumpmässigt månad mellan 1 och 12
             int month = random.Next(1, 13);
 
-            // Generera ett slumpmässigt dag baserat på månaden
             int daysInMonth = DateTime.DaysInMonth(2024, month);
             int day = random.Next(1, daysInMonth + 1);
 
