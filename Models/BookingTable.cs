@@ -14,7 +14,7 @@ namespace MovieTheater.Models
         public int Amount { get; set; }
         [ForeignKey("MovieDetailsId")]
         public virtual Movie Movie { get; set; }
-        public Seat Seat { get; set; }
+        public List<Seat> Seat { get; set; }
         public int SeatId { get; set; }
 
         // public BookingTable()

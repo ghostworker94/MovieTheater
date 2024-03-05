@@ -55,8 +55,7 @@
     You have selected <span>@SelectedSeatsCount</span> seats for a price of $<span>@TotalPrice</span>
 </p>
 
-<form>Email: <input type="email" name="" id=""></form>
-
+<form class="email">Email: <input type="email"></form><button class="button" role="button">Book Ticket</button>
 
 @code
 {
@@ -79,11 +78,13 @@
 
     private async Task ToggleSeat(int rowIndex, int seatIndex)
     {
-        SelectedSeatsCount++;
         var seat = Rows[rowIndex][seatIndex];
-        seat.IsOccupied = !seat.IsOccupied;
-        seat.IsSelected = !seat.IsSelected;
-        await SeatService.UpdateSeat(seat);
+        if (!seat.IsOccupied)
+        {
+            seat.IsSelected = true;
+            SelectedSeatsCount++;
+            await SeatService.UpdateSeat(seat);
+        }
         UpdateSelectedCount();
         StateHasChanged();
     }
@@ -92,5 +93,15 @@
     {
         SelectedSeatsCount = Rows.SelectMany(row => row).Count(seat => seat.IsOccupied);
         TotalPrice = SelectedSeatsCount * Movies[SelectedMovieIndex].Value;
+    }
+    public void BookTicket()
+    {
+        var selectedSeats = Rows.SelectMany(row => row).Where(seat => seat.IsSelected).ToList();
+        var booking = new BookingTable
+            {
+                MovieId = Movies[SelectedMovieIndex].Id,
+                Seat = selectedSeats
+            };
+        BookingService.AddBooking(booking);
     }
 }
