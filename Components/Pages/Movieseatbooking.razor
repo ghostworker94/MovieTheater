@@ -17,7 +17,7 @@
     <select @bind="@SelectedMovieIndex">
         @foreach (var movie in Movies)
         {
-            <option value="@movie.Value">@movie.Title ($@movie.Value)</option>
+                <option value="@movie.Value">@movie.Title ($@movie.Value)</option>
         }
     </select>
 </div>
@@ -41,13 +41,13 @@
     <div class="screen"></div>
     @foreach (var row in Rows.Select((value, index) => new { value, index }))
     {
-        <div class="row">
+            <div class="row">
             @foreach (var seat in row.value.Select((value, index) => new { value, index }))
             {
-                <button class="@(seat.value.IsOccupied ? "seat.occupied" : seat.value.IsSelected ? "seat.selected" : "seat")"
-                    @onclick="() => ToggleSeat(row.index, seat.index)"></button>
+                        <button class="@(seat.value.IsOccupied ? "seat.occupied" : seat.value.IsSelected ? "seat.selected" : "seat")"
+                            @onclick="() => ToggleSeat(row.index, seat.index)"></button>
             }
-        </div>
+            </div>
     }
 </div>
 
@@ -104,7 +104,7 @@
                 Seat = selectedSeats,
                 Email = this.Email,
                 Amount = TotalPrice,
-                PresentingDate = BookingService.RandomDate
+                PresentingDate = BookingService.RandomDate()
             };
         BookingService.AddBooking(booking);
     }
