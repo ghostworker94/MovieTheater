@@ -2,7 +2,7 @@ using MovieTheater.DataBaseContext;
 using MovieTheater.Models;
 using Newtonsoft.Json;
 
-namespace MovieTheater.Service
+namespace MovieTheater.Services
 {
     public class MovieApiService
     {
