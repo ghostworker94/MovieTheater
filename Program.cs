@@ -1,7 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using MovieTheater;
 using MovieTheater.DataBaseContext;
-using MovieTheater.Service;
 using MovieTheater.Services;
 using MovieTheaterBlazor.Components;
 
