@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MovieTheaterBlazor")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6aeb83cc21bc2cacfa193db654e7a127464ee3d7")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+499ac76a3367882e8821443f7c03669cc52b5f16")]
 [assembly: System.Reflection.AssemblyProductAttribute("MovieTheaterBlazor")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MovieTheaterBlazor")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
