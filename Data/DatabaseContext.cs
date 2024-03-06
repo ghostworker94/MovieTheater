@@ -45,6 +45,11 @@ namespace MovieTheater.DataBaseContext
             .HasOne(b => b.User)
             .WithMany(u => u.BookingTables)
             .HasForeignKey(b => b.UserId);
+
+            modelBuilder.Entity<Seat>()
+            .HasOne(s => s.BookingTable)
+            .WithMany(b => b.Seat)
+            .HasForeignKey(s => s.BookingTableId);
         }
     }
 }

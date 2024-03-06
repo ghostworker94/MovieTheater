@@ -29,8 +29,8 @@ using (var scope = app.Services.CreateScope())
 {
     var services = scope.ServiceProvider;
     var seeder = services.GetRequiredService<Seed>();
-    seeder.SeedSeatData();
-    // seeder.SeedGenreData();
+    //seeder.SeedSeatData();
+    //seeder.SeedGenreData();
 
     var movieService = services.GetRequiredService<MovieApiService>();
     movieService.UpdateDatabaseWithMovies().Wait();

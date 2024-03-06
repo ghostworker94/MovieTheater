@@ -1,31 +1,31 @@
 {
   "Files": [
     {
-      "Id": "E:\\Suvnet2023\\OOP2\\MVCÖvning\\MovieTheaterBlazor\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\MovieTheaterBlazor.bundle.scp.css",
+      "Id": "D:\\Suvnet2023\\OOP2\\Blazor\\MovieTheater\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\MovieTheaterBlazor.bundle.scp.css",
       "PackagePath": "staticwebassets\\MovieTheaterBlazor.bundle.scp.css"
     },
     {
-      "Id": "E:\\Suvnet2023\\OOP2\\MVCÖvning\\MovieTheaterBlazor\\wwwroot\\BookingStyle.css",
+      "Id": "D:\\Suvnet2023\\OOP2\\Blazor\\MovieTheater\\wwwroot\\BookingStyle.css",
       "PackagePath": "staticwebassets\\BookingStyle.css"
     },
     {
-      "Id": "E:\\Suvnet2023\\OOP2\\MVCÖvning\\MovieTheaterBlazor\\wwwroot\\app.css",
+      "Id": "D:\\Suvnet2023\\OOP2\\Blazor\\MovieTheater\\wwwroot\\app.css",
       "PackagePath": "staticwebassets\\app.css"
     },
     {
-      "Id": "E:\\Suvnet2023\\OOP2\\MVCÖvning\\MovieTheaterBlazor\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "Id": "D:\\Suvnet2023\\OOP2\\Blazor\\MovieTheater\\wwwroot\\bootstrap\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css"
     },
     {
-      "Id": "E:\\Suvnet2023\\OOP2\\MVCÖvning\\MovieTheaterBlazor\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "Id": "D:\\Suvnet2023\\OOP2\\Blazor\\MovieTheater\\wwwroot\\bootstrap\\bootstrap.min.css.map",
       "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css.map"
     },
     {
-      "Id": "E:\\Suvnet2023\\OOP2\\MVCÖvning\\MovieTheaterBlazor\\wwwroot\\favicon.png",
+      "Id": "D:\\Suvnet2023\\OOP2\\Blazor\\MovieTheater\\wwwroot\\favicon.png",
       "PackagePath": "staticwebassets\\favicon.png"
     },
     {
-      "Id": "E:\\Suvnet2023\\OOP2\\MVCÖvning\\MovieTheaterBlazor\\wwwroot\\moviestyle.css",
+      "Id": "D:\\Suvnet2023\\OOP2\\Blazor\\MovieTheater\\wwwroot\\moviestyle.css",
       "PackagePath": "staticwebassets\\moviestyle.css"
     },
     {

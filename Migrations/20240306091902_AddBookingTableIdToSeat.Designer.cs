@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using MovieTheater.DataBaseContext;
 
@@ -10,9 +11,11 @@ using MovieTheater.DataBaseContext;
 namespace MovieTheaterBlazor.Migrations
 {
     [DbContext(typeof(DatabaseContext))]
-    partial class DatabaseContextModelSnapshot : ModelSnapshot
+    [Migration("20240306091902_AddBookingTableIdToSeat")]
+    partial class AddBookingTableIdToSeat
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "8.0.2");
@@ -166,7 +169,7 @@ namespace MovieTheaterBlazor.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
-                    b.Property<int?>("BookingTableId")
+                    b.Property<int>("BookingTableId")
                         .HasColumnType("INTEGER");
 
                     b.Property<bool>("IsOccupied")
@@ -240,7 +243,9 @@ namespace MovieTheaterBlazor.Migrations
                 {
                     b.HasOne("MovieTheater.Models.BookingTable", "BookingTable")
                         .WithMany("Seat")
-                        .HasForeignKey("BookingTableId");
+                        .HasForeignKey("BookingTableId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.HasOne("MovieTheater.Models.Movie", "Movie")
                         .WithMany()

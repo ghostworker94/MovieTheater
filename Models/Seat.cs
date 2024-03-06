@@ -9,4 +9,6 @@ public class Seat
     public bool IsSelected { get; set; }
     public int MovieId { get; set; }
     public Movie Movie { get; set; }
+    public int? BookingTableId { get; set; }
+    public BookingTable? BookingTable { get; set; }
 }

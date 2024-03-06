@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "C4tIuVyYFWJq9LqhE2dIXw6wtrEl8e132IMt6bFzF1Y=",
+  "Hash": "qtBCrm0q83xP8DCyVjfAn/yQOWsu7PE1XeGspFiJXZI=",
   "Source": "MovieTheaterBlazor",
   "BasePath": "_content/MovieTheaterBlazor",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "MovieTheaterBlazor\\wwwroot",
       "Source": "MovieTheaterBlazor",
-      "ContentRoot": "E:\\Suvnet2023\\OOP2\\MVCÖvning\\MovieTheaterBlazor\\wwwroot\\",
+      "ContentRoot": "D:\\Suvnet2023\\OOP2\\Blazor\\MovieTheater\\wwwroot\\",
       "BasePath": "_content/MovieTheaterBlazor",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "E:\\Suvnet2023\\OOP2\\MVCÖvning\\MovieTheaterBlazor\\obj\\Debug\\net8.0\\scopedcss\\bundle\\MovieTheaterBlazor.styles.css",
+      "Identity": "D:\\Suvnet2023\\OOP2\\Blazor\\MovieTheater\\obj\\Debug\\net8.0\\scopedcss\\bundle\\MovieTheaterBlazor.styles.css",
       "SourceId": "MovieTheaterBlazor",
       "SourceType": "Computed",
-      "ContentRoot": "E:\\Suvnet2023\\OOP2\\MVCÖvning\\MovieTheaterBlazor\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
+      "ContentRoot": "D:\\Suvnet2023\\OOP2\\Blazor\\MovieTheater\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
       "BasePath": "_content/MovieTheaterBlazor",
       "RelativePath": "MovieTheaterBlazor.styles.css",
       "AssetKind": "All",
@@ -33,13 +33,13 @@
       "AssetTraitValue": "ApplicationBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "E:\\Suvnet2023\\OOP2\\MVCÖvning\\MovieTheaterBlazor\\obj\\Debug\\net8.0\\scopedcss\\bundle\\MovieTheaterBlazor.styles.css"
+      "OriginalItemSpec": "D:\\Suvnet2023\\OOP2\\Blazor\\MovieTheater\\obj\\Debug\\net8.0\\scopedcss\\bundle\\MovieTheaterBlazor.styles.css"
     },
     {
-      "Identity": "E:\\Suvnet2023\\OOP2\\MVCÖvning\\MovieTheaterBlazor\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\MovieTheaterBlazor.bundle.scp.css",
+      "Identity": "D:\\Suvnet2023\\OOP2\\Blazor\\MovieTheater\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\MovieTheaterBlazor.bundle.scp.css",
       "SourceId": "MovieTheaterBlazor",
       "SourceType": "Computed",
-      "ContentRoot": "E:\\Suvnet2023\\OOP2\\MVCÖvning\\MovieTheaterBlazor\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
+      "ContentRoot": "D:\\Suvnet2023\\OOP2\\Blazor\\MovieTheater\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
       "BasePath": "_content/MovieTheaterBlazor",
       "RelativePath": "MovieTheaterBlazor.bundle.scp.css",
       "AssetKind": "All",
@@ -52,13 +52,13 @@
       "AssetTraitValue": "ProjectBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "E:\\Suvnet2023\\OOP2\\MVCÖvning\\MovieTheaterBlazor\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\MovieTheaterBlazor.bundle.scp.css"
+      "OriginalItemSpec": "D:\\Suvnet2023\\OOP2\\Blazor\\MovieTheater\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\MovieTheaterBlazor.bundle.scp.css"
     },
     {
-      "Identity": "E:\\Suvnet2023\\OOP2\\MVCÖvning\\MovieTheaterBlazor\\wwwroot\\app.css",
+      "Identity": "D:\\Suvnet2023\\OOP2\\Blazor\\MovieTheater\\wwwroot\\app.css",
       "SourceId": "MovieTheaterBlazor",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Suvnet2023\\OOP2\\MVCÖvning\\MovieTheaterBlazor\\wwwroot\\",
+      "ContentRoot": "D:\\Suvnet2023\\OOP2\\Blazor\\MovieTheater\\wwwroot\\",
       "BasePath": "_content/MovieTheaterBlazor",
       "RelativePath": "app.css",
       "AssetKind": "All",
@@ -74,10 +74,10 @@
       "OriginalItemSpec": "wwwroot\\app.css"
     },
     {
-      "Identity": "E:\\Suvnet2023\\OOP2\\MVCÖvning\\MovieTheaterBlazor\\wwwroot\\BookingStyle.css",
+      "Identity": "D:\\Suvnet2023\\OOP2\\Blazor\\MovieTheater\\wwwroot\\BookingStyle.css",
       "SourceId": "MovieTheaterBlazor",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Suvnet2023\\OOP2\\MVCÖvning\\MovieTheaterBlazor\\wwwroot\\",
+      "ContentRoot": "D:\\Suvnet2023\\OOP2\\Blazor\\MovieTheater\\wwwroot\\",
       "BasePath": "_content/MovieTheaterBlazor",
       "RelativePath": "BookingStyle.css",
       "AssetKind": "All",
@@ -93,10 +93,10 @@
       "OriginalItemSpec": "wwwroot\\BookingStyle.css"
     },
     {
-      "Identity": "E:\\Suvnet2023\\OOP2\\MVCÖvning\\MovieTheaterBlazor\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "Identity": "D:\\Suvnet2023\\OOP2\\Blazor\\MovieTheater\\wwwroot\\bootstrap\\bootstrap.min.css",
       "SourceId": "MovieTheaterBlazor",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Suvnet2023\\OOP2\\MVCÖvning\\MovieTheaterBlazor\\wwwroot\\",
+      "ContentRoot": "D:\\Suvnet2023\\OOP2\\Blazor\\MovieTheater\\wwwroot\\",
       "BasePath": "_content/MovieTheaterBlazor",
       "RelativePath": "bootstrap/bootstrap.min.css",
       "AssetKind": "All",
@@ -112,10 +112,10 @@
       "OriginalItemSpec": "wwwroot\\bootstrap\\bootstrap.min.css"
     },
     {
-      "Identity": "E:\\Suvnet2023\\OOP2\\MVCÖvning\\MovieTheaterBlazor\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "Identity": "D:\\Suvnet2023\\OOP2\\Blazor\\MovieTheater\\wwwroot\\bootstrap\\bootstrap.min.css.map",
       "SourceId": "MovieTheaterBlazor",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Suvnet2023\\OOP2\\MVCÖvning\\MovieTheaterBlazor\\wwwroot\\",
+      "ContentRoot": "D:\\Suvnet2023\\OOP2\\Blazor\\MovieTheater\\wwwroot\\",
       "BasePath": "_content/MovieTheaterBlazor",
       "RelativePath": "bootstrap/bootstrap.min.css.map",
       "AssetKind": "All",
@@ -131,10 +131,10 @@
       "OriginalItemSpec": "wwwroot\\bootstrap\\bootstrap.min.css.map"
     },
     {
-      "Identity": "E:\\Suvnet2023\\OOP2\\MVCÖvning\\MovieTheaterBlazor\\wwwroot\\favicon.png",
+      "Identity": "D:\\Suvnet2023\\OOP2\\Blazor\\MovieTheater\\wwwroot\\favicon.png",
       "SourceId": "MovieTheaterBlazor",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Suvnet2023\\OOP2\\MVCÖvning\\MovieTheaterBlazor\\wwwroot\\",
+      "ContentRoot": "D:\\Suvnet2023\\OOP2\\Blazor\\MovieTheater\\wwwroot\\",
       "BasePath": "_content/MovieTheaterBlazor",
       "RelativePath": "favicon.png",
       "AssetKind": "All",
@@ -150,10 +150,10 @@
       "OriginalItemSpec": "wwwroot\\favicon.png"
     },
     {
-      "Identity": "E:\\Suvnet2023\\OOP2\\MVCÖvning\\MovieTheaterBlazor\\wwwroot\\moviestyle.css",
+      "Identity": "D:\\Suvnet2023\\OOP2\\Blazor\\MovieTheater\\wwwroot\\moviestyle.css",
       "SourceId": "MovieTheaterBlazor",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Suvnet2023\\OOP2\\MVCÖvning\\MovieTheaterBlazor\\wwwroot\\",
+      "ContentRoot": "D:\\Suvnet2023\\OOP2\\Blazor\\MovieTheater\\wwwroot\\",
       "BasePath": "_content/MovieTheaterBlazor",
       "RelativePath": "moviestyle.css",
       "AssetKind": "All",

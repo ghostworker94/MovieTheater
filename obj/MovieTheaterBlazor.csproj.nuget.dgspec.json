@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Suvnet2023\\OOP2\\MVCÖvning\\MovieTheaterBlazor\\MovieTheaterBlazor.csproj": {}
+    "D:\\Suvnet2023\\OOP2\\Blazor\\MovieTheater\\MovieTheaterBlazor.csproj": {}
   },
   "projects": {
-    "E:\\Suvnet2023\\OOP2\\MVCÖvning\\MovieTheaterBlazor\\MovieTheaterBlazor.csproj": {
+    "D:\\Suvnet2023\\OOP2\\Blazor\\MovieTheater\\MovieTheaterBlazor.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Suvnet2023\\OOP2\\MVCÖvning\\MovieTheaterBlazor\\MovieTheaterBlazor.csproj",
+        "projectUniqueName": "D:\\Suvnet2023\\OOP2\\Blazor\\MovieTheater\\MovieTheaterBlazor.csproj",
         "projectName": "MovieTheaterBlazor",
-        "projectPath": "E:\\Suvnet2023\\OOP2\\MVCÖvning\\MovieTheaterBlazor\\MovieTheaterBlazor.csproj",
-        "packagesPath": "C:\\Users\\henke\\.nuget\\packages\\",
-        "outputPath": "E:\\Suvnet2023\\OOP2\\MVCÖvning\\MovieTheaterBlazor\\obj\\",
+        "projectPath": "D:\\Suvnet2023\\OOP2\\Blazor\\MovieTheater\\MovieTheaterBlazor.csproj",
+        "packagesPath": "C:\\Users\\46707\\.nuget\\packages\\",
+        "outputPath": "D:\\Suvnet2023\\OOP2\\Blazor\\MovieTheater\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\henke\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\46707\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -32,6 +32,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -82,7 +87,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.201/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

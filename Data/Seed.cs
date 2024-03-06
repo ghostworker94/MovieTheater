@@ -17,9 +17,9 @@ namespace MovieTheater
         public void SeedSeatData()
         {
             var movies = _movieService.GetMovies();
-            int rows = 6; // Antal rader
-            int seatsPerRow = 9; // Antal säten per rad
-            int totalSeats = rows * seatsPerRow; // Totalt antal säten
+            int rows = 6;
+            int seatsPerRow = 9;
+            int totalSeats = rows * seatsPerRow;
 
             if (_dataContext.Seat.Count() >= totalSeats)
             {
